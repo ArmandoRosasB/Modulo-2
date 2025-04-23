@@ -56,4 +56,10 @@ El modelo se compila con el optimizador adam, un learning rate inicial de 0.001 
 * Accuracy: 0.9724 – Indica que el modelo clasifica correctamente el 97.24% de los casos.
 * Precision: 0.9817 – Muestra que cuando el modelo predice un caso positivo, tiene una confiabilidad del 98.17%, con menos falsos positivos.
 * Recall: 0.8378 – Revela que el modelo identifica correctamente el 83.78% de todos los casos reales de diabetes, mejorando levemente su capacidad de detección respecto a la versión anterior.
-* F1: 0.8041 – Este valor, que representa el equilibrio entre precisión y recall, sugiere una mejora general en el rendimiento del modelo.
+* F1: – Este valor, que representa el equilibrio entre precisión y recall, sugiere una mejora general en el rendimiento del modelo.
+
+## Conclusiones
+Aunque la mejora en las métricas del modelo puede parecer pequeña en términos porcentuales, en el contexto del sector salud, pueden tener un impacto significativo. Un aumento leve en el recall, por ejemplo, implica la detección de más casos reales de una condición como la diabetes, lo cual puede traducirse en diagnósticos más tempranos y mejores oportunidades de tratamiento. Por tanto, estas mejoras, aunque sutiles en apariencia, representan un progreso valioso en la efectividad del modelo en aplicaciones clínicas.
+
+## Referencias
+Saihood, Q., & Sonuç, E. (2023). A practical framework for early detection of diabetes using ensemble machine learning models. Turkish Journal of Electrical Engineering and Computer Sciences, 31(4), 722–738. https://doi.org/10.55730/1300-0632.4013
