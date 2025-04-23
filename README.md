@@ -37,10 +37,10 @@ Este proyecto se basa en los resultados del paper "A practical framework for ear
 * División de datos: El dataset se dividió en conjuntos de entrenamiento y pruebas
   
 ## Arquitectura del modelo
-El proyecto implementa un Perceptrón Multicapa (MLP) usando la API Sequential de Keras. Este modelo consta de 3 capas. La primera capa contiene 128 neuronas, la segunda capa cuenta con 300 neuronas, ambas utilizando la función de activación ReLU. La capa de salida contiene 2 neuronas con activación Sigmoid, correspondientes a las categorías de clasificación para pacientes con diabetes.
+El proyecto implementa un Perceptrón Multicapa (MLP) usando la API Sequential de Keras. Este modelo consta de 3 capas. La primera capa contiene 300 neuronas, la segunda capa cuenta con 300 neuronas, ambas utilizando la función de activación ReLU. La capa de salida contiene 2 neuronas con activación Sigmoid, correspondientes a las categorías de clasificación para pacientes con diabetes.
 El modelo se compila con el optimizador SGD y utiliza sparse_categorical_crossentropy como función de pérdida.
 
-## Resultados y Evaluación Inicial
+## Evaluación Inicial
 * Accuracy: 0.972 - Indica que el modelo clasifica correctamente el 97.2% de los casos, lo que representa una alta precisión general.
 * Precision: 0.983 - Muestra que cuando el modelo predice un caso positivo (diabetes), tiene una confiabilidad del 98.3%, con muy pocos falsos positivos.
 * Recall: 0.835 - Revela que el modelo identifica correctamente el 83.5% de todos los casos reales de diabetes, aunque algunos casos positivos no son detectados.
@@ -48,6 +48,12 @@ El modelo se compila con el optimizador SGD y utiliza sparse_categorical_crossen
 
 ## Principales Cambios con Respecto al Modelo Base 
 * Número de épocas: He aumentado el número de épocas a 20
-* Funcion de activación: Cmabio de softmax a sigmoid
+* Funcion de activación: Cambio de softmax a sigmoid
 * Numero de neuronas: En la primera y segunda capa se aumento el numero de neuronas a 300
 * Nornalización: El StandardScaler se ajustó únicamente sobre el conjunto de entrenamiento y posteriormente se aplicó tanto al conjunto de pruebas
+
+## Evaluación Final
+* Accuracy: 0.9724 – Indica que el modelo clasifica correctamente el 97.24% de los casos, lo que representa una excelente precisión general y una buena estabilidad del desempeño.
+* Precision: 0.9817 – Muestra que cuando el modelo predice un caso positivo (por ejemplo, un diagnóstico de diabetes), tiene una confiabilidad del 98.17%, con muy pocos falsos positivos.
+* Recall: 0.8378 – Revela que el modelo identifica correctamente el 83.78% de todos los casos reales de diabetes, mejorando levemente su capacidad de detección respecto a la versión anterior.
+* F1: 0.8041 – Este valor, que representa el equilibrio entre precisión y recall, sugiere una mejora general en el rendimiento del modelo, reflejando una mayor eficacia para identificar casos positivos sin sacrificar la precisión.
