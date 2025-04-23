@@ -6,6 +6,7 @@ Nombre del dataset: [Diabetes Health Indicators Dataset](https://www.kaggle.com/
 
 ## Variables
 Edad: Edad del paciente.
+Masulino o femenino
 Glucosa: Nivel de glucosa en sangre
 IMC: Índice de masa corporal (IMC)
 Presión arterial: Presión arterial del paciente 
@@ -14,7 +15,6 @@ Hipertensión: Valor binario que indica si el paciente sufre de hipertensión
 Problemas cardiacos: Valor binario que indica si el paciente tiene problemas del corazón
 Historial de fumador: Insica que tanto el paciente considera que fuma
 Hemoglobina A1c: Cantidad de azúcar en la sangre
-Glucosa: Nivel de glucosa en al sangre
 
 ## Distribución de los datos
 
@@ -38,7 +38,7 @@ Este proyecto se basa en los resultados del paper "A practical framework for ear
   
 ## Arquitectura del modelo
 El proyecto implementa un Perceptrón Multicapa (MLP) usando la API Sequential de Keras. Este modelo consta de 3 capas. La primera capa contiene 128 neuronas, la segunda capa cuenta con 300 neuronas, ambas utilizando la función de activación ReLU. La capa de salida contiene 2 neuronas con activación Sigmoid, correspondientes a las categorías de clasificación para pacientes con diabetes.
-El modelo se compila con el optimizador SGD y utiliza binary_crossentropy como función de pérdida.
+El modelo se compila con el optimizador SGD y utiliza sparse_categorical_crossentropy como función de pérdida.
 
 ## Resultados y Evaluación Inicial
 * Accuracy: 0.972 - Indica que el modelo clasifica correctamente el 97.2% de los casos, lo que representa una alta precisión general.
@@ -47,8 +47,7 @@ El modelo se compila con el optimizador SGD y utiliza binary_crossentropy como f
 * F1: 0.800 - Este valor, que representa el equilibrio entre precisión y recall, sugiere un buen desempeño general del modelo, aunque hay espacio para mejorar en la identificación de casos positivos.
 
 ## Principales Cambios con Respecto al Modelo Base 
-* Optimizador: Cambio del optimizador de Adam a SGD
-* Número de épocas: He aumentado el número de épocas a 25
+* Número de épocas: He aumentado el número de épocas a 20
 * Funcion de activación: Cmabio de softmax a sigmoid
-* Numero de neuronas: En la segunda capa se aumento el numero de neuronas a 300
-* Función de pérdioda: Cambiod de sparse_categorical binary_crossentropy
+* Numero de neuronas: En la primera y segunda capa se aumento el numero de neuronas a 300
+* Nornalización: El StandardScaler se ajustó únicamente sobre el conjunto de entrenamiento y posteriormente se aplicó tanto al conjunto de pruebas
