@@ -41,10 +41,10 @@ El proyecto implementa un Perceptrón Multicapa (MLP) usando la API Sequential d
 El modelo se compila con el optimizador adam, un learning rate inicial de 0.001 y utiliza sparse_categorical_crossentropy como función de pérdida.
 
 ## Evaluación Inicial
-* Accuracy: 0.972 - Indica que el modelo clasifica correctamente el 97.2% de los casos, lo que representa una alta precisión general.
-* Precision: 0.983 - Muestra que cuando el modelo predice un caso positivo (diabetes), tiene una confiabilidad del 98.3%, con muy pocos falsos positivos.
-* Recall: 0.835 - Revela que el modelo identifica correctamente el 83.5% de todos los casos reales de diabetes, aunque algunos casos positivos no son detectados.
-* F1: 0.800 - Este valor, que representa el equilibrio entre precisión y recall, sugiere un buen desempeño general del modelo, aunque hay espacio para mejorar en la identificación de casos positivos.
+* Accuracy: 0.971 - Indica que el modelo clasifica correctamente el 97.1% de los casos.
+* Precision: 0.97 - Muestra que cuando el modelo predice un caso positivo, tiene una confiabilidad del 97%, con muy pocos falsos positivos.
+* Recall: 0.83 - Revela que el modelo identifica correctamente el 83% de todos los casos reales de diabetes, aunque algunos casos positivos no son detectados.
+* F1: 0.79- Este valor, que representa el equilibrio entre precisión y recall, sugiere un buen desempeño general del modelo, aunque hay espacio para mejorar en la identificación de casos positivos.
 
 ## Principales Cambios con Respecto al Modelo Base 
 * Número de épocas: He aumentado el número de épocas a 20
@@ -53,7 +53,7 @@ El modelo se compila con el optimizador adam, un learning rate inicial de 0.001 
 * Nornalización: El StandardScaler se ajustó únicamente sobre el conjunto de entrenamiento y posteriormente se aplicó tanto al conjunto de pruebas
 
 ## Evaluación Final
-* Accuracy: 0.9724 – Indica que el modelo clasifica correctamente el 97.24% de los casos, lo que representa una excelente precisión general y una buena estabilidad del desempeño.
-* Precision: 0.9817 – Muestra que cuando el modelo predice un caso positivo (por ejemplo, un diagnóstico de diabetes), tiene una confiabilidad del 98.17%, con muy pocos falsos positivos.
+* Accuracy: 0.9724 – Indica que el modelo clasifica correctamente el 97.24% de los casos.
+* Precision: 0.9817 – Muestra que cuando el modelo predice un caso positivo, tiene una confiabilidad del 98.17%, con menos falsos positivos.
 * Recall: 0.8378 – Revela que el modelo identifica correctamente el 83.78% de todos los casos reales de diabetes, mejorando levemente su capacidad de detección respecto a la versión anterior.
-* F1: 0.8041 – Este valor, que representa el equilibrio entre precisión y recall, sugiere una mejora general en el rendimiento del modelo, reflejando una mayor eficacia para identificar casos positivos sin sacrificar la precisión.
+* F1: 0.8041 – Este valor, que representa el equilibrio entre precisión y recall, sugiere una mejora general en el rendimiento del modelo.
