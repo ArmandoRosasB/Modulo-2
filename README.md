@@ -37,8 +37,8 @@ Este proyecto se basa en los resultados del paper "A practical framework for ear
 * División de datos: El dataset se dividió en conjuntos de entrenamiento y pruebas
   
 ## Arquitectura del modelo
-El proyecto implementa un Perceptrón Multicapa (MLP) usando la API Sequential de Keras. Este modelo consta de 3 capas. La primera capa contiene 300 neuronas, la segunda capa cuenta con 300 neuronas, ambas utilizando la función de activación ReLU. La capa de salida contiene 2 neuronas con activación Sigmoid, correspondientes a las categorías de clasificación para pacientes con diabetes.
-El modelo se compila con el optimizador SGD y utiliza sparse_categorical_crossentropy como función de pérdida.
+El proyecto implementa un Perceptrón Multicapa (MLP) usando la API Sequential de Keras. Este modelo consta de 3 capas. Las primeras capas contienen 300 neuronas, ambas utilizando la función de activación ReLU. La capa de salida contiene 2 neuronas con activación Sigmoid, correspondientes a las categorías de clasificación para pacientes con diabetes.
+El modelo se compila con el optimizador adam, un learning rate inicial de 0.001 y utiliza sparse_categorical_crossentropy como función de pérdida.
 
 ## Evaluación Inicial
 * Accuracy: 0.972 - Indica que el modelo clasifica correctamente el 97.2% de los casos, lo que representa una alta precisión general.
