@@ -41,14 +41,14 @@ El proyecto implementa un Perceptrón Multicapa (MLP) usando la API Sequential d
 El modelo se compila con el optimizador SGD y utiliza binary_crossentropy como función de pérdida.
 
 ## Resultados y Evaluación Inicial
-Accuracy: 0.972 - Indica que el modelo clasifica correctamente el 97.2% de los casos, lo que representa una alta precisión general.
-Precision: 0.983 - Muestra que cuando el modelo predice un caso positivo (diabetes), tiene una confiabilidad del 98.3%, con muy pocos falsos positivos.
-Recall: 0.835 - Revela que el modelo identifica correctamente el 83.5% de todos los casos reales de diabetes, aunque algunos casos positivos no son detectados.
-F1: 0.800 - Este valor, que representa el equilibrio entre precisión y recall, sugiere un buen desempeño general del modelo, aunque hay espacio para mejorar en la identificación de casos positivos.
+* Accuracy: 0.972 - Indica que el modelo clasifica correctamente el 97.2% de los casos, lo que representa una alta precisión general.
+* Precision: 0.983 - Muestra que cuando el modelo predice un caso positivo (diabetes), tiene una confiabilidad del 98.3%, con muy pocos falsos positivos.
+* Recall: 0.835 - Revela que el modelo identifica correctamente el 83.5% de todos los casos reales de diabetes, aunque algunos casos positivos no son detectados.
+* F1: 0.800 - Este valor, que representa el equilibrio entre precisión y recall, sugiere un buen desempeño general del modelo, aunque hay espacio para mejorar en la identificación de casos positivos.
 
 ## Principales Cambios con Respecto al Modelo Base 
-Optimizador: Cambio del optimizador de Adam a SGD
-Número de épocas: He aumentado el número de épocas a 25
-Funcion de activación: Cmabio de softmax a sigmoid
-Numero de neuronas: En la segunda capa se aumento el numero de neuronas a 300
-Función de pérdioda: Cambiod de sparse_categorical binary_crossentropy
+* Optimizador: Cambio del optimizador de Adam a SGD
+* Número de épocas: He aumentado el número de épocas a 25
+* Funcion de activación: Cmabio de softmax a sigmoid
+* Numero de neuronas: En la segunda capa se aumento el numero de neuronas a 300
+* Función de pérdioda: Cambiod de sparse_categorical binary_crossentropy
